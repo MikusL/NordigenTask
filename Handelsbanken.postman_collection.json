@@ -7,10 +7,60 @@
 	"item": [
 		{
 			"name": "List of accounts",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "X-IBM-Client-Id",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "PSU-IP-Address",
+						"value": "192.102.28.2",
+						"type": "text"
+					},
+					{
+						"key": "TPP-Request-ID",
+						"value": "c8271b81-4229-5a1f-bf9c-758f11c1f5b1",
+						"type": "text"
+					},
+					{
+						"key": "TPP-Transaction-ID",
+						"value": "6b24ce42-237f-4303-a917-cf778e5013d6",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.handelsbanken.com/openbanking/psd2/v2/accounts",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"handelsbanken",
+						"com"
+					],
+					"path": [
+						"openbanking",
+						"psd2",
+						"v2",
+						"accounts"
+					]
+				}
 			},
 			"response": [
 				{
@@ -105,10 +155,62 @@
 		},
 		{
 			"name": "List of transactions",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3",
+						"type": "text"
+					},
+					{
+						"key": "TPP-Transaction-ID",
+						"value": "6b24ce42-237f-4303-a917-cf778e5013d6",
+						"type": "text"
+					},
+					{
+						"key": "TPP-Request-ID",
+						"value": "c8271b81-4229-5a1f-bf9c-758f11c1f5b1",
+						"type": "text"
+					},
+					{
+						"key": "PSU-IP-Address",
+						"value": "192.102.28.2",
+						"type": "text"
+					},
+					{
+						"key": "X-IBM-Client-Id",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.handelsbanken.com/openbanking/psd2/v2/accounts/ae596e20-6cf3-11e9-9c41-e957ce7d7d69/transactions",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"handelsbanken",
+						"com"
+					],
+					"path": [
+						"openbanking",
+						"psd2",
+						"v2",
+						"accounts",
+						"ae596e20-6cf3-11e9-9c41-e957ce7d7d69",
+						"transactions"
+					]
+				}
 			},
 			"response": [
 				{

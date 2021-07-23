@@ -18,7 +18,7 @@
 					"oauth2": [
 						{
 							"key": "scope",
-							"value": "psd2_accounts AND psd2_payments",
+							"value": "psd2_accounts psd2_payments",
 							"type": "string"
 						},
 						{
